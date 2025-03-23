@@ -7,7 +7,7 @@ int sumOfDigits(int n) {
 }
 
 int main() {
-    int n = 1256;  // Example number
+    int n = 1256;  
     std::cout << "Sum of digits of " << n << " is: " << sumOfDigits(n) << std::endl;
     return 0;
 }
