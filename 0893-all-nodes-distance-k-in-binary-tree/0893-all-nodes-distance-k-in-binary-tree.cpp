@@ -1,16 +1,6 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 
 class Solution {
 public:
-    // Helper to map each node to its parent
     void buildParentMap(TreeNode* node, unordered_map<TreeNode*, TreeNode*>& parentMap) {
         queue<TreeNode*> q;
         q.push(node);
@@ -30,7 +20,7 @@ public:
 
     vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
         unordered_map<TreeNode*, TreeNode*> parentMap;
-        buildParentMap(root, parentMap); // Step 1: build parent links
+        buildParentMap(root, parentMap); 
 
         unordered_set<TreeNode*> visited;
         queue<TreeNode*> q;
